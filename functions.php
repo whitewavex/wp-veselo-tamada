@@ -92,4 +92,34 @@ register_sidebar( array(
     'after_widget' => ''
 ));
 
+/* Our team */
+
+add_action( 'init', 'our_team' );
+
+function our_team() {
+    $args = array(
+        'public' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'menu_icon' => get_template_directory_uri() . '/img/team.png',
+        'labels' => array(
+            'name' => 'Наша команда',
+            'all_items' => 'Все участники',
+            'add_new' => 'Добавить участника',
+            'add_new_item' => 'Новый участник',
+            'edit_item' => 'Редактировать участника',
+            'search_items' => 'Поиск участников',
+            'featured_image' => 'Фото'
+        )
+    );
+    register_post_type( 'team', $args );
+}
+
+/* Page excerpt */
+
+function page_excerpt() {
+    add_post_type_support('page', array('excerpt'));
+}
+
+add_action('init', 'page_excerpt');
+
 ?>

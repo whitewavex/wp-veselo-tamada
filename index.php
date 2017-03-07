@@ -1,8 +1,17 @@
 <?php get_header(); ?>
    <main>
    
-        <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-            <div class="description-wrapper text">
+        <?php $args = array(
+            'post_type' => array('page'),
+            'meta_key' => 'order',
+            'orderby' => 'meta_value_num',
+            'order' => 'ASC',
+            'posts_per_page' => 1 ); ?>
+            
+        <?php $page_index = new WP_Query($args); ?>
+        
+        <?php if ($page_index->have_posts()) :  while ($page_index->have_posts()) : $page_index->the_post(); ?>
+            <div class="description-wrapper">
                <div class="container">
                    <h2 class="section-title"><?php the_title(); ?></h2>
                    <?php the_content(); ?>

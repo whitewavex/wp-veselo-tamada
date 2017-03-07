@@ -546,7 +546,7 @@ html {
 .person {
   padding: 80px 0; }
   .person img {
-    width: 100%; }
+    max-width: 100%; }
 
 .person:first-of-type {
   border-bottom: 1px solid transparent;
@@ -584,9 +584,6 @@ html {
     margin-bottom: 20px; }
   .person-info p:last-of-type {
     margin-bottom: 0; }
-
-.p1 {
-  margin-top: 25%; }
 
 /* PORTFOLIO: WORKS */
 .works {
@@ -887,6 +884,19 @@ form input[type=submit]:active {
 #closeFoto {
   top: 3%; }
 
+div.wpcf7-validation-errors {
+    border: none !important;
+    color: red; }
+
+span.wpcf7-not-valid-tip {
+    display: inline !important;
+    font-size: 11px !important;
+    margin-left: 15px; }
+
+div.wpcf7-mail-sent-ok {
+    border: none !important;
+    color: gray; }
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1199px) {
   .head-title h1 {
@@ -929,8 +939,6 @@ form input[type=submit]:active {
     display: none; }
   .review {
     padding-left: 90px; }
-  .p1 {
-    margin-top: 0; }
   form textarea {
     width: 320px; }
   .advice {

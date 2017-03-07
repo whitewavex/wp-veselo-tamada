@@ -40,30 +40,8 @@
                 </div>
            </div>
        </div>
-       <div class="carousel-wrapper">
-           <div class="container">
-               <div id="carousel-container">
-                   <ul class="carousel">
-                   
-                       <?php $slider = new WP_Query( array(
-                            'post_type' => 'slider',
-                            'order' => 'ASC'
-                        )); ?>
-
-                        <?php if ( $slider->have_posts() ) :  while ( $slider->have_posts() ) : $slider->the_post(); ?>
-                        <li>
-                            <?php the_post_thumbnail(); ?>
-                        </li>
-                        <?php endwhile; ?>
-                        <?php endif; ?>
-
-                   </ul>
-                   <div class="controls">
-                       <a class="prevSlide"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                       <a class="nextSlide"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                   </div>
-               </div>
-           </div>
+       <div class="cover">
+            <img src="<?php bloginfo('template_url'); ?>/img/about-bg.jpg" alt="">
        </div>
        <div class="navbar-wrapper">
            <div class="container navbar-container">
