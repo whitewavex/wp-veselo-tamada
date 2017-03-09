@@ -758,6 +758,7 @@ form input[type=submit]:active {
   position: relative; }
   .advice img {
     width: 96%;
+    height: 100%;
     -webkit-box-shadow: 8px 13px 13px rgba(0, 0, 0, 0.75);
             box-shadow: 8px 13px 13px rgba(0, 0, 0, 0.75);
     -webkit-filter: grayscale(100%);
