@@ -595,6 +595,7 @@ html {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s; }
   .works img {
+    height: 100%;
     width: 100%; }
   .works h3 {
     font-style: italic;
@@ -806,22 +807,22 @@ form input[type=submit]:active {
           transition-duration: 1s; }
 
 .married {
-  background-image: url(../img/just-married.jpg); }
+  background-image: url(img/just-married.jpg); }
 
 .married-color {
-  background-image: url(../img/just-married-color.jpg); }
+  background-image: url(img/just-married-color.jpg); }
 
 .glasses {
-  background-image: url(../img/glasses.jpg); }
+  background-image: url(img/glasses.jpg); }
 
 .glasses-color {
-  background-image: url(../img/glasses-color.jpg); }
+  background-image: url(img/glasses-color.jpg); }
 
 .happy {
-  background-image: url(../img/happy-birthday.jpg); }
+  background-image: url(img/happy-birthday.jpg); }
 
 .happy-color {
-  background-image: url(../img/happy-birthday-color.jpg); }
+  background-image: url(img/happy-birthday-color.jpg); }
 
 /* ADVICE-SINGLE */
 .advice-single p {
@@ -855,6 +856,7 @@ form input[type=submit]:active {
   overflow: auto;
   position: relative; }
   .gallery img, .galleryContainer img {
+    height: 100%;
     max-width: 100%; }
 
 .slide {

@@ -122,4 +122,18 @@ function page_excerpt() {
 
 add_action('init', 'page_excerpt');
 
+/* Shortcode gallery */
+
+function code_gallery( $attr, $text='' ) {
+    $img_src = explode(',', $attr['ids']);
+    $return = '<div class="container"><div class="gallery"><div class="galleryContainer">';
+    foreach( $img_src as $item ){
+        $img_url = wp_get_attachment_image( $item, 'full' );
+        $return .= '<div class="slide">' . $img_url . '</div>';
+    }
+    $return .= '</div></div></div>';
+    echo $return;
+    
+}
+add_shortcode( 'gallery-code', 'code_gallery' );
 ?>
