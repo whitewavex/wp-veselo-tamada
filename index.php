@@ -25,7 +25,7 @@
                <div class="row">
                    <div class="col-sm-4">
                         <div class="holidays">
-                            <a class="weddings" href="<?php bloginfo('template_url'); ?>/service.html#wedding">
+                            <a class="weddings" href="<?php get_home_url(); ?>/?cat=6#wedding">
                                 <p>Wedding</p>
                             </a>
                             <h4>Свадьбы</h4>
@@ -33,7 +33,7 @@
                    </div>
                    <div class="col-sm-4">
                         <div class="holidays">
-                            <a class="corporate" href="<?php bloginfo('template_url'); ?>/service.html#corporate">
+                            <a class="corporate" href="<?php get_home_url(); ?>/?cat=6#corporate">
                                 <p>Corporate</p>
                             </a>
                             <h4>Корпоративы</h4>
@@ -41,7 +41,7 @@
                    </div>
                    <div class="col-sm-4">
                         <div class="holidays">
-                            <a class="birthday" href="<?php bloginfo('template_url'); ?>/service.html#birthday">
+                            <a class="birthday" href="<?php get_home_url(); ?>/?cat=6#birthday">
                                 <p>Birthday</p>
                             </a>
                             <h4>Дни рождения</h4>
