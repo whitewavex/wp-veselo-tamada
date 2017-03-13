@@ -136,4 +136,23 @@ function code_gallery( $attr, $text='' ) {
     
 }
 add_shortcode( 'gallery-code', 'code_gallery' );
+
+/* Info Header */
+
+register_sidebar( array(
+    'name' => 'Шапка по центру',
+    'id' => 'header_center',
+    'description' => 'Место для телефонов',
+    'before_widget' => '',
+    'after_widget' => ''
+));
+
+register_sidebar( array(
+    'name' => 'Шапка справа',
+    'id' => 'header_right',
+    'description' => 'Место для e-mail',
+    'before_widget' => '',
+    'after_widget' => ''
+));
+
 ?>

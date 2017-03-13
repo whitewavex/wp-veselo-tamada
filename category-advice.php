@@ -9,7 +9,7 @@
                     <?php $href = get_permalink(); ?>
                     <div class="col-sm-4">
                       <?php foreach( $custom_field_keys as $key ){
-                          if( preg_match('#^_edit#', $key ) || preg_match('#^_thumbnail#', $key ) || preg_match('#^_wp#', $key ) ) {
+                          if( preg_match('#^_edit#', $key ) || preg_match('#^_thumbnail#', $key ) || preg_match('#^_wp#', $key ) || preg_match('#^enclosure#', $key ) ) {
                               continue;
                           }
                           else {

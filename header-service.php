@@ -18,15 +18,14 @@
                <div class="row">
                    <div class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-1 col-xs-12 col-xs-offset-0">
                       <div class="head-phone">
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                          <p>(063) 650-12-24</p>
-                          <p>(095) 741-00-45</p>
+                          <?php if( !dynamic_sidebar('header_center') ): ?>
+                          <?php endif; ?>
                       </div>
                    </div>
                    <div class="col-lg-3 col-md-4 col-sm-5">
                        <div class="head-envelope">
-                          <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                          <p>veselo-tamada@ukr.net</p>
+                           <?php if( !dynamic_sidebar('header_right') ): ?>
+                           <?php endif; ?>
                       </div>
                    </div>
                </div>
@@ -36,7 +35,7 @@
            <div class="container">
                 <div class="head-title">
                    <img src="<?php bloginfo('template_url'); ?>/img/heart.png" alt="">
-                   <h1>Тамада на свадьбу, корпоратив, юбилей</h1>
+                   <h1><?php bloginfo( 'description' ); ?></h1>
                 </div>
            </div>
        </div>

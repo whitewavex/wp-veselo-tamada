@@ -20,15 +20,6 @@
                        <div class="widget">
                             <?php if( !dynamic_sidebar( 'footer_right' ) ): ?>
                             <?php endif; ?>
-<!--
-                            <script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>
-
-                             VK Widget 
-                            <div id="vk_groups"></div>
-                            <script type="text/javascript">
-                            VK.Widgets.Group("vk_groups", {mode: 1, width: "300px"}, 40780155);
-                            </script>
--->
                       </div>
                    </div>
                </div>
