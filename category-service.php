@@ -12,7 +12,7 @@
                               $title = get_the_title();
                               $price = $value[0];
                               $content = get_the_content();
-                              if( preg_match('#^_edit#', $key ) || preg_match('#^_thumbnail#', $key ) || preg_match('#^_wp#', $key ) || preg_match('#^_edit#', $key ) || preg_match('#add-service#', $key ) ) {
+                              if( preg_match('#add-service#', $key ) || preg_match('#^_#', $key ) ) {
                                   continue;
                               }
                               else {

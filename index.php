@@ -19,13 +19,39 @@
             </div>
         <?php endwhile; ?>
         <?php endif; ?>
-        
+       <section class="person-wrapper">
+           <div class="container">
+           
+               <?php $team = new WP_Query(array('post_type' => 'team', 'order' => 'ASC')) ?>
+
+               <?php if( $team->have_posts() ) : while ( $team->have_posts() ) : $team->the_post(); ?>
+                   <div class="person">
+                       <div class="row line">
+                           <div class="col-md-6 col-sm-5">
+                               <div class="person-img-1">
+                                   <?php the_post_thumbnail(); ?>
+                               </div>
+                           </div>
+                           <div class="col-md-6 col-sm-7">
+                               <div class="person-info">
+                                   <h4><?php the_title(); ?></h4>
+                                   <?php the_content(); ?>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+               <?php endwhile; ?>
+               <?php else: ?>
+               <?php endif; ?>
+               
+           </div>
+       </section> 
        <div class="holidays-wrapper">
            <div class="container">
                <div class="row">
                    <div class="col-sm-4">
                         <div class="holidays">
-                            <a class="weddings" href="<?php get_home_url(); ?>/?cat=6#wedding">
+                            <a class="weddings" href="<?php get_home_url(); ?>/?cat=2#wedding">
                                 <p>Wedding</p>
                             </a>
                             <h4>Свадьбы</h4>
@@ -33,7 +59,7 @@
                    </div>
                    <div class="col-sm-4">
                         <div class="holidays">
-                            <a class="corporate" href="<?php get_home_url(); ?>/?cat=6#corporate">
+                            <a class="corporate" href="<?php get_home_url(); ?>/?cat=2#corporate">
                                 <p>Corporate</p>
                             </a>
                             <h4>Корпоративы</h4>
@@ -41,7 +67,7 @@
                    </div>
                    <div class="col-sm-4">
                         <div class="holidays">
-                            <a class="birthday" href="<?php get_home_url(); ?>/?cat=6#birthday">
+                            <a class="birthday" href="<?php get_home_url(); ?>/?cat=2#birthday">
                                 <p>Birthday</p>
                             </a>
                             <h4>Дни рождения</h4>
@@ -114,7 +140,7 @@
                                <?php the_post_thumbnail(); ?>
                                <div class="review">
                                    <h4><?php the_title(); ?></h4>
-                                   <?php the_content(); ?>
+                                   <?php the_content('(прочитать полностью ...)'); ?>
                                </div>
                            </li> 
         <?php endwhile; ?>

@@ -8,7 +8,7 @@
                     <?php $custom_field_keys = get_post_custom_keys(); ?>
                     <div class="col-sm-4 center">
                       <?php foreach( $custom_field_keys as $key ){
-                          if( preg_match('#^_edit#', $key ) || preg_match('#^_thumbnail#', $key ) ) {
+                          if( preg_match('#^_#', $key ) ) {
                               continue;
                           }
                           else {
@@ -27,7 +27,7 @@
       <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
         <?php $custom_field_keys = get_post_custom_keys(); ?>
           <?php foreach( $custom_field_keys as $key ){
-              if( preg_match('#^_edit#', $key ) || preg_match('#^_thumbnail#', $key ) ) {
+              if( preg_match('#^_#', $key ) ) {
                   continue;
               }
               else {
@@ -56,7 +56,7 @@
                                <?php the_post_thumbnail(); ?>
                                <div class="review">
                                    <h4><?php the_title(); ?></h4>
-                                   <?php the_content(); ?>
+                                   <?php the_content('(прочитать полностью ...)'); ?>
                                </div>
                            </li> 
         <?php endwhile; ?>

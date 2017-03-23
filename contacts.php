@@ -23,7 +23,7 @@ Template Name: Контакты
                             <?php $custom_fields = get_post_custom(get_the_ID()); ?>
                             <?php
                             foreach( $custom_fields as $key => $value ){
-                                if( preg_match('#^_edit#', $key ) || preg_match('#^_wp#', $key ) ) {
+                                if( preg_match('#^_#', $key ) ) {
                                     continue;
                                 }
                                 else {
