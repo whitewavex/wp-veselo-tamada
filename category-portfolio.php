@@ -40,22 +40,27 @@
       <?php endwhile; ?>
       <?php endif; ?>
       <div class="band band-center"></div>
+      
       <div class="description-wrapper">
           <div class="container">
               <h2 class="section-title visible-block">Видео</h2>
               <div class="row">
-                  <div class="col-sm-6 col-xs-12">
-                     <div class="video">
-                        <center></center><iframe width="727" height="352" src="https://www.youtube.com/embed/o4D_1phN95U" frameborder="0" allowfullscreen></iframe></center>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
-                      <div class="video">
-                        <center></center><iframe width="727" height="352" src="https://www.youtube.com/embed/i9AHJkHqkpw" frameborder="0" allowfullscreen></iframe></center>
-                     </div>
-                  </div>
-              </div>
+      
+      <?php $video = new WP_Query( array(
+            'post_type' => 'video',
+            'order' => 'ASC'
+        )); ?>
+
+        <?php if ( $video->have_posts() ) : while ( $video->have_posts() ) : $video->the_post(); ?>
+                          <div class="col-sm-6 col-xs-12">
+                             <div class="video">
+                                <?php the_content(); ?>
+                             </div>
+                          </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+            </div>
           </div>
-      </div>
+       </div>
    </main>
    <?php get_footer(); ?>

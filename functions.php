@@ -74,6 +74,27 @@ function reviews() {
     register_post_type( 'reviews', $args );
 }
 
+/* Video */
+
+add_action( 'init', 'video' );
+
+function video() {
+    $args = array(
+        'public' => true,
+        'supports' => array( 'title', 'editor' ),
+        'menu_icon' => get_template_directory_uri() . '/img/video.png',
+        'labels' => array(
+            'name' => 'Видео',
+            'all_items' => 'Все видео',
+            'add_new' => 'Добавить видео',
+            'add_new_item' => 'Новое видео',
+            'edit_item' => 'Редактировать видео',
+            'search_items' => 'Поиск видео'
+        )
+    );
+    register_post_type( 'video', $args );
+}
+
 /* Info Footer */
 
 register_sidebar( array(
