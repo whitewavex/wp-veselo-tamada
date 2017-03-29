@@ -661,6 +661,12 @@ a.more-link:visited {
   -webkit-box-shadow: none;
           box-shadow: none; }
 
+.video {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .video iframe {
+    max-width: 100%; }
+
 /* SERVICE: ACCORDEON */
 .accordeon-container {
   position: relative;

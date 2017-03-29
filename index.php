@@ -78,7 +78,7 @@
        </div>
        
         <?php 
-            $id = 3;
+            $id = 1;
             $posts_advantage = new WP_Query( array( 
                 'cat' => $id, 
                 'posts_per_page' => 3,

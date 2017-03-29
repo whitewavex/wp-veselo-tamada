@@ -2,7 +2,7 @@
    <main>
       <div class="description-wrapper">
           <div class="container">
-               <h2 class="section-title"><?php single_cat_title(); ?></h2>
+               <h2 class="section-title visible-block"><?php single_cat_title(); ?></h2>
                <div class="row">
                 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
                     <?php $custom_field_keys = get_post_custom_keys(); ?>
@@ -40,35 +40,22 @@
       <?php endwhile; ?>
       <?php endif; ?>
       <div class="band band-center"></div>
-      <div class="reviews-wrapper">
-           <div class="container">
-               <h2 class="section-title visible-block">Отзывы клиентов</h2>
-               <div id="reviews-container">
-                   <ul class="reviews">
-        
-        <?php $reviews = new WP_Query( array(
-            'post_type' => 'reviews',
-            'order' => 'ASC'
-        )); ?>
-       
-        <?php if ( $reviews->have_posts() ) : while ( $reviews->have_posts() ) : $reviews->the_post(); ?>
-                          <li>
-                               <?php the_post_thumbnail(); ?>
-                               <div class="review">
-                                   <h4><?php the_title(); ?></h4>
-                                   <?php the_content('(прочитать полностью ...)'); ?>
-                               </div>
-                           </li> 
-        <?php endwhile; ?>
-        <?php endif; ?>
-        
-                   </ul>
-                   <div class="reviews-control">
-                       <a class="prevReview"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                       <a class="nextReview"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                   </div>
-               </div>
-           </div>
-       </div>
+      <div class="description-wrapper">
+          <div class="container">
+              <h2 class="section-title visible-block">Видео</h2>
+              <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                     <div class="video">
+                        <center></center><iframe width="727" height="352" src="https://www.youtube.com/embed/o4D_1phN95U" frameborder="0" allowfullscreen></iframe></center>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-xs-12">
+                      <div class="video">
+                        <center></center><iframe width="727" height="352" src="https://www.youtube.com/embed/i9AHJkHqkpw" frameborder="0" allowfullscreen></iframe></center>
+                     </div>
+                  </div>
+              </div>
+          </div>
+      </div>
    </main>
    <?php get_footer(); ?>

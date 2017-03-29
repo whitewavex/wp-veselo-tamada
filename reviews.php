@@ -9,7 +9,6 @@ Template Name: Отзывы
             <section class="description-wrapper reviews-section">
                 <div class="container">
                     <h2 class="section-title"><?php the_title(); ?></h2>
-                    <?php the_content(); ?>
                 </div>
             </section>
             <section class="reviews-section">
@@ -23,7 +22,6 @@ Template Name: Отзывы
         )); ?>
 
         <?php if ( $reviews->have_posts() ) : while ( $reviews->have_posts() ) : $reviews->the_post(); ?>
-             <div class="reviews-line"></div>
                <div class="reviews-container advice-single">
                   <div class="container">
                       <div class="review-foto">
@@ -33,6 +31,18 @@ Template Name: Отзывы
                       <?php the_content('(прочитать полностью ...)'); ?>
                   </div>
                </div>
+               <div class="reviews-line"></div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+        
+        <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
+            <section class="description-wrapper reviews-section">
+                <div class="container">
+                    <?php the_content(); ?>
+                </div>
+            </section>
+            <section class="reviews-section">
+                <div class="container">
         <?php endwhile; ?>
         <?php endif; ?>
    </main>
